@@ -1,0 +1,4 @@
+name = "curso_programacion_julia"
+uuid = "44209dc4-b724-4fa4-8108-ac2892f2b9ed"
+authors = ["Mauricio Tejada <mauriciotejada@gmail.com>"]
+version = "0.1.0"
