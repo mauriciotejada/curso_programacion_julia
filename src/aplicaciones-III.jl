@@ -15,10 +15,10 @@ pyplot()
 
 fc = fxy([1, 1])
 df = Calculus.gradient(fxy,[1, 1])
-fx = df[1]
-fy = df[2]
+dfx = df[1]
+dfy = df[2]
 
-fxyaprox(x) = fc - fx - fy + fx*x[1] + fy*x[2]
+fxyaprox(x) = fc - dfx - dfy + dfx*x[1] + dfy*x[2]
 
 x=[1.1, 1.1]
 fo = fxy(x)
@@ -103,7 +103,7 @@ using DelimitedFiles
 using Distributions
 using Optim
 
-impdata = readdlm("DatosMCO.txt", ',')
+impdata = readdlm("src/DatosMCO.txt", ',')
 N, K = size(impdata)
 y = impdata[:,1]
 X1 = impdata[:,2]

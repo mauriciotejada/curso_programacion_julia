@@ -176,4 +176,4 @@ plt_sincos = plot(x,[y1 y2], xlabel="x", ylabel="f(x)", title = "Función Seno y
                   grid = true)
 display(plt_sincos)
 
-savefig(plt_sincos, "mytestplot.pdf")
+savefig(plt_sincos, "src/mytestplot.pdf")

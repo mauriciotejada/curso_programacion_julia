@@ -13,24 +13,24 @@ using Plots
 datos = readxl("src/FBKFChile.xlsx", "Datos!A2:B57")
 
 tiempo = datos[:,1]
-I = datos[:,2]
+inversion = datos[:,2]
 
-plt_inv = plot(tiempo,I, xlabel="Año", ylabel="Miles de Millones de Pesos Encadenados", 
+plt_inv = plot(tiempo,inversion, xlabel="Año", ylabel="Miles de Millones de Pesos Encadenados", 
                title = "Chile: Formación Bruta de Capital Fijo", 
                color="red", legend=false, linewidth = 2, grid = true)
 display(plt_inv)
 
-T = length(I)
+T = length(inversion)
 
 K = zeros(T,1)
 K[1] = 30201645    # Capital Inicial
 delta = 0.05
 
 for i=2:T
-    K[i] = K[i-1] - delta*K[i-1] + I[i-1]
+    K[i] = K[i-1] - delta*K[i-1] + inversion[i-1]
 end
 
-plt_cap = plot(tiempo,I, xlabel="Año", ylabel="Miles de Millones de Pesos Encadenados", 
+plt_cap = plot(tiempo,K, xlabel="Año", ylabel="Miles de Millones de Pesos Encadenados", 
                title = "Chile: Stock de Capital", 
                color="blue", legend=false, linewidth = 2, grid = true)
 display(plt_cap)
@@ -38,47 +38,47 @@ display(plt_cap)
 # Shocks y ciclos económicos
 T    = 100
 y    = zeros(T)
-eps  = zeros(T)
+epsilon  = zeros(T)
 phi  = 0.9
 prob = 0.5
 y[1] = 0;
 
 for t=2:T
     if rand()<=prob 
-        eps[t] = 1.0
+        epsilon[t] = 1.0
     else
-        eps[t] = -1.0
+        epsilon[t] = -1.0
     end
-    y[t] = phi*y[t-1]+eps[t]
+    y[t] = phi*y[t-1]+epsilon[t]
 end
 
 plot(collect(1:T), y, color="blue", legend=false, linewidth = 2, grid = true)
 
 y   = zeros(T)
-eps = zeros(T)
+epsilon = zeros(T)
 
 for t=2:T 
     a=rand();
     if a<=0.25
-        eps[t] = 1.0
+        epsilon[t] = 1.0
     elseif a<=0.5 
-        eps[t] = 0.5
+        epsilon[t] = 0.5
     elseif a<=0.75 
-        eps[t] = -0.5
+        epsilon[t] = -0.5
     else
-        eps[t] = -1.0
+        epsilon[t] = -1.0
     end
-    y[t] = phi*y[t-1]+eps[t]
+    y[t] = phi*y[t-1]+epsilon[t]
 end
 
 plot(collect(1:T), y, color="blue", legend=false, linewidth = 2, grid = true)
 
 y   = zeros(T)
-eps = zeros(T)
+epsilon = zeros(T)
 
 for t=2:T 
-    eps[t]=0+2*randn()
-    y[t] = phi*y[t-1]+eps[t]
+    epsilon[t]=0+2*randn()
+    y[t] = phi*y[t-1]+epsilon[t]
 end
 
 plot(collect(1:T), y, color="blue", legend=false, linewidth = 2, grid = true)
