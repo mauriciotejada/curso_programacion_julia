@@ -70,7 +70,7 @@ xtup = (1, 2, 3, "texto")
 
 xtup[4]
 
-xtup[2] = 8
+# xtup[2] = 8
 
 # Diccionarios
 notas = Dict("Javier" => 6.5, "Camila" => 6.8, "Ernesto" => "No Rindio el Examen")

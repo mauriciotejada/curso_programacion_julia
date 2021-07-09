@@ -10,7 +10,7 @@ Language Version: 1.6.1
 using ExcelReaders
 using Plots
 
-datos = readxl("FBKFChile.xlsx", "Datos!A2:B57")
+datos = readxl("src/FBKFChile.xlsx", "Datos!A2:B57")
 
 tiempo = datos[:,1]
 I = datos[:,2]

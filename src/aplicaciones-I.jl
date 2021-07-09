@@ -41,14 +41,14 @@ x = A \ b   # alternativamente x =inv(A)*b
 N = 100;
 X1 = 1.0*ones(N,1) + 2*randn(N,1);
 X2 = 2.0*ones(N,1) + 2*randn(N,1);
-eps = randn(N,1);
-y  = 3.0*ones(N,1) + 0.5*X1 +0.9*X2 + eps;
+epsilon = randn(N,1);
+y  = 3.0*ones(N,1) + 0.5*X1 +0.9*X2 + epsilon;
 
 data = [y X1 X2]
 
-writedlm("testols.txt", data)
+writedlm("src/testols.txt", data)
 
-impdata = readdlm("testols.txt")
+impdata = readdlm("src/testols.txt")
 
 N = 100
 y = impdata[:,1]

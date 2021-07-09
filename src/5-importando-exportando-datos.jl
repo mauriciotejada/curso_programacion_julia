@@ -9,12 +9,12 @@ Language Version: 1.6.1
 # Leer y escribir archivos delimitados csv
 using DelimitedFiles
 
-datos2 = readdlm("src/scripts/PIBChile.csv", ',')
+datos2 = readdlm("src/PIBChile.csv", ',')
 
 datos = 10*ones(100,5) + 5*randn(100,5);
-writedlm("miarchivo.txt", datos)
+writedlm("src/miarchivo.txt", datos)
 
-datos2 = readdlm("src/scripts/miarchivo.txt", '\t')
+datos2 = readdlm("src/miarchivo.txt", '\t')
 
 # Leer archivo excel
 using ExcelReaders
@@ -22,9 +22,9 @@ using Statistics
 using Plots
 
 # Nos aseguramos de estar en el directorio de trabajo correcto.
-cd("/Users/mauriciotejada/Dropbox/Teaching/MAE - Julia/2020/slides/") 
+pwd()
 
-datos = readxl("src/scripts/PIBChile.xlsx", "Datos!A2:B57")
+datos = readxl("src/PIBChile.xlsx", "Datos!A2:B57")
 
 tiempo = datos[:,1]
 pib    = datos[:,2];
@@ -48,9 +48,9 @@ using JLD
 
 t = 15
 z = [1,3]
-save("miarchivo.jld", "t", t, "z", z)
+save("src/miarchivo.jld", "t", t, "z", z)
 
-d = load("miarchivo.jld")
+d = load("src/miarchivo.jld")
 
 # Recuperamos el objeto original
 z = d["z"]
