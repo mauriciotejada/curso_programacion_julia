@@ -6,7 +6,7 @@ Este material  corresponde al curso de Introducción a la Programación en Julia
 
 Las notas de clase para el curso se encuentran en el siguiente [link](https://mauriciotejada.com/programacionjulia/).
 
-Adicionalmente, en la carpeta *src* de este repositorio encontrará todos los archivos `jl` y los `notebooks` asociados a la clase.
+Adicionalmente, en la carpeta *src* de este repositorio encontrará todos los archivos `jl` asociados a la clase.
 
 ## Instalar Julia
 
@@ -14,7 +14,7 @@ Descargue *Julia* desde sitio oficial:
 
 https://julialang.org/downloads/
 
-Elija la versión adecuada para su sistema operativo. La versión actual estable (a julio 2020) es 1.6.2. Instale el paquete descargado usando todas las opciones por defecto.
+Elija la versión adecuada para su sistema operativo. La versión actual estable (a julio 2021) es 1.6.2. Instale el paquete descargado usando todas las opciones por defecto.
 
 Para interactuar con *Julia* mientras escribimos los programas vamos a utilizar un editor de texto que sirva además como *Entorno Integrado de Desarrollo (IDE)*. Existe dos muy buenas opciones: *Visual Studio Code (VScode)* y *Atom*. Para el curso vamos a utilizar VScode.
 
