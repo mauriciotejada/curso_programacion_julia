@@ -14,23 +14,17 @@ Descargue *Julia* desde sitio oficial:
 
 https://julialang.org/downloads/
 
-Elija la versión adecuada para su sistema operativo. La versión actual estable (a julio 2020) es 1.4.2. Instale el paquete descargado usando todas las opciones por defecto.
+Elija la versión adecuada para su sistema operativo. La versión actual estable (a julio 2020) es 1.6.2. Instale el paquete descargado usando todas las opciones por defecto.
 
-Para interactuar con *Julia* mientras escribimos los programas vamos a utilizar un editor de texto que sirva además como *Entorno Integrado de Desarrollo (IDE)*. Existe dos muy buenas opciones: *Visual Studio Code (VScode)* y *Atom*. Personalmente prefiero VScode para mi trabajo diario.
+Para interactuar con *Julia* mientras escribimos los programas vamos a utilizar un editor de texto que sirva además como *Entorno Integrado de Desarrollo (IDE)*. Existe dos muy buenas opciones: *Visual Studio Code (VScode)* y *Atom*. Para el curso vamos a utilizar VScode.
 
 Los editores de texto pueden descargarse desde sus respectivas páginas web. Abajo se presenta un breve descripción de cómo instalar la extensión que permite conectar el editor de texto con *julia*.
 
-1. VScode: https://code.visualstudio.com/
+VScode: https://code.visualstudio.com/
 
 - Abrir VScode y presionar command+shift+p (control+shift+p en windows) 
 - Buscar: *Install Extensions*
 - Buscar: *julia* e instalar.
-
-2. Atom: https://atom.io/
-
-- Abrir Atom y presionar command+shift+p (control+shift+p en windows) 
-- Buscar: *Install Packages*
-- Buscar: *uber-juno* e instalar.
 
 ## Flujo de Trabajo y Entrega de Tareas
 
