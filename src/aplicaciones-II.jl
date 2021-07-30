@@ -7,10 +7,10 @@ Language Version: 1.6.1
 =#
 
 # Aplicación: Stock de Capital de Chile
-using ExcelReaders
+using XLSX
 using Plots
 
-datos = readxl("src/FBKFChile.xlsx", "Datos!A2:B57")
+datos = XLSX.readdata("src/FBKFChile.xlsx", "Datos", "A2:B57")
 
 tiempo = datos[:,1]
 inversion = datos[:,2]

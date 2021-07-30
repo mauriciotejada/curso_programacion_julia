@@ -3,7 +3,7 @@ using Pkg;
 Pkg.add("Calculus");
 Pkg.add("Cubature");
 Pkg.add("Distributions");
-Pkg.add("ExcelReaders");
+Pkg.add("XLSX");
 Pkg.add("ForwardDiff");
 Pkg.add("GLPK");
 Pkg.add("Interpolations");

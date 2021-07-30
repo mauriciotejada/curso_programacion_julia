@@ -17,17 +17,17 @@ writedlm("src/miarchivo.txt", datos)
 datos2 = readdlm("src/miarchivo.txt", '\t')
 
 # Leer archivo excel
-using ExcelReaders
+using XLSX
 using Statistics
 using Plots
 
 # Nos aseguramos de estar en el directorio de trabajo correcto.
 pwd()
 
-datos = readxl("src/PIBChile.xlsx", "Datos!A2:B57")
+datos = XLSX.readdata("src/PIBChile.xlsx", "Datos", "A2:B57")
 
 tiempo = datos[:,1]
-pib    = datos[:,2];
+pib    = datos[:,2]
 
 plt_pib = plot(tiempo,pib, xlabel="Año", ylabel="Miles de Millones de Pesos Encadenados", title = "PIB Real de Chile", 
                color="blue", legend=false, linewidth = 2, grid = true)
